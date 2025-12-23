@@ -1,0 +1,255 @@
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+body {
+
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
+
+    background: #fafafa;
+
+}
+
+/* Navbar */
+
+.navbar {
+
+    position: sticky;
+
+    top: 0;
+
+    height: 54px;
+
+    background: white;
+
+    border-bottom: 1px solid #dbdbdb;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 0 20px;
+
+    z-index: 100;
+
+}
+
+.nav-left {
+
+    font-weight: bold;
+
+    font-size: 20px;
+
+}
+
+.nav-right a {
+
+    margin-left: 15px;
+
+    text-decoration: none;
+
+    color: black;
+
+    font-size: 18px;
+
+}
+
+/* Container */
+
+.container {
+
+    max-width: 600px;
+
+    margin: 30px auto;
+
+}
+
+/* Post Card */
+
+.post-card {
+
+    background: white;
+
+    border: 1px solid #dbdbdb;
+
+    margin-bottom: 25px;
+
+}
+
+/* Post Header */
+
+.post-header {
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 10px;
+
+    font-weight: bold;
+
+}
+
+.avatar {
+
+    width: 32px;
+
+    height: 32px;
+
+    background: #ddd;
+
+    border-radius: 50%;
+
+    margin-right: 10px;
+
+}
+
+/* Post Image */
+
+.post-image {
+
+    width: 100%;
+
+    max-height: 500px;
+
+    object-fit: cover;
+
+}
+
+/* Actions */
+
+.post-actions {
+
+    padding: 10px;
+
+    font-size: 18px;
+
+}
+
+/* Caption & Comments */
+
+.post-caption,
+
+.comments {
+
+    padding: 0 10px 10px;
+
+    font-size: 14px;
+
+}
+
+.comments p {
+
+    margin-top: 4px;
+
+}
+
+/* Comment Box */
+
+.comment-form {
+
+    border-top: 1px solid #efefef;
+
+}
+
+.comment-form input {
+
+    width: 100%;
+
+    border: none;
+
+    padding: 12px;
+
+    outline: none;
+
+}
+
+/* Profile Page */
+
+.profile-header {
+
+    display: flex;
+
+    align-items: center;
+
+    margin-bottom: 30px;
+
+}
+
+.profile-avatar {
+
+    width: 80px;
+
+    height: 80px;
+
+    background: #ddd;
+
+    border-radius: 50%;
+
+    margin-right: 30px;
+
+}
+
+.profile-info h2 {
+
+    margin-bottom: 10px;
+
+}
+
+.follow-btn {
+
+    padding: 6px 15px;
+
+    border: 1px solid #0095f6;
+
+    color: #0095f6;
+
+    text-decoration: none;
+
+    border-radius: 4px;
+
+    font-weight: bold;
+
+}
+
+/* Grid */
+
+.profile-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 4px;
+
+}
+
+.profile-grid img {
+
+    width: 100%;
+
+    height: 200px;
+
+    object-fit: cover;
+
+}
+
+/* Upload */
+
+.upload-box {
+
+    background: white;
+
+    padding: 20px;
+
+    border: 1px solid #dbdbdb;
+
+}

@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="profile-header">
+
+    <div class="profile-avatar"></div>
+
+    <div class="profile-info">
+        <h2>{{ user_obj.username }}</h2>
+
+        {% if request.user.username != user_obj.username %}
+        <a class="follow-btn" href="/follow/{{ user_obj.username }}/">
+
+            {% if is_following %}
+
+            Unfollow
+
+            {% else %}
+
+            Follow
+
+            {% endif %}
+        </a>
+
+        {% endif %}
+
+        <div class="stats">
+            <span><b>{{ posts.count }}</b> posts</span>
+        </div>
+    </div>
+</div>
+
+<div class="profile-grid">
+
+    {% for post in posts %}
+    <img src="{{ post.image.url }}">
+
+    {% empty %}
+    <p>No posts yet.</p>
+
+    {% endfor %}
+</div>
+
+{% endblock %}

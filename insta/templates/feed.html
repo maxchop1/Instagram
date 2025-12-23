@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% for post in posts %}
+<div class="post-card">
+
+    <!-- Post Header -->
+    <div class="post-header">
+        <div class="avatar"></div>
+        <a href="/profile/{{ post.user.username }}/">
+            {{ post.user.username }}
+        </a>
+    </div>
+
+    <!-- Post Image -->
+    <img class="post-image" src="{{ post.image.url }}">
+
+    <!-- Actions -->
+    <div class="post-actions">
+        <a href="/like/{{ post.id }}/">❤️</a>
+        <span>{{ post.total_likes }} likes</span>
+    </div>
+
+    <!-- Caption -->
+    <div class="post-caption">
+        <b>{{ post.user.username }}</b> {{ post.caption }}
+    </div>
+
+    <!-- Comments -->
+    <div class="comments">
+        {% for com in post.comment_set.all|slice:":3" %}
+        <p><b>{{ com.user.username }}</b> {{ com.text }}</p>
+        {% endfor %}
+    </div>
+
+    <!-- Comment Form -->
+    <form method="POST" action="/comment/{{ post.id }}/" class="comment-form">
+        {% csrf_token %}
+        <input name="text" placeholder="Add a comment..." required>
+    </form>
+
+</div>
+{% empty %}
+<p style="text-align:center;">No posts yet.</p>
+{% endfor %}
+
+{% endblock %}
