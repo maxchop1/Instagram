@@ -75,12 +75,12 @@ body {
 /* Post Card */
 
 .post-card {
-
+    width: 400px;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    overflow: hidden;
     background: white;
-
-    border: 1px solid #dbdbdb;
-
-    margin-bottom: 25px;
 
 }
 
@@ -117,10 +117,11 @@ body {
 .post-image {
 
     width: 100%;
-
-    max-height: 500px;
-
+    height: 400px;
+    /* STANDARD SIZE */
     object-fit: cover;
+    /* CROPS, DOES NOT STRETCH */
+    display: block;
 
 }
 
